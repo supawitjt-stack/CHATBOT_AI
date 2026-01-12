@@ -1,0 +1,13 @@
+# ไฟล์ Environment Variables (ห้ามเอาขึ้นเด็ดขาด)
+.env
+
+# โฟลเดอร์ Cache ของ Python
+__pycache__/
+*.pyc
+
+# โฟลเดอร์ Virtual Environment (ถ้ามี)
+venv/
+env/
+
+# ไฟล์ Cache ที่โปรแกรมสร้างขึ้นมา (แล้วแต่คุณว่าจะเอาขึ้นไหม แต่แนะนำว่าไม่ควร)
+extracted_content_cache.txt
