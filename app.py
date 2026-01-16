@@ -242,7 +242,7 @@ def get_knowledge_base():
     # เริ่มกระบวนการ OCR
     status_placeholder = st.empty()
     progress_bar = st.progress(0)
-    status_placeholder.info("📑 กำลังเตรียมข้อมูล (ครั้งแรกอาจใช้นานนิดนึงครับ)...")
+    status_placeholder.info("📑 กำลังเตรียมข้อมูล (ครั้งแรกอาจใช้เวลานานนิดนึงครับ)...")
 
     progress_bar = st.progress(0, text="Starting engine...")
     try:
@@ -264,7 +264,7 @@ def get_knowledge_base():
             progress_bar.progress(min(percent, 100), text=f"กำลังอ่านข้อมูล {current_page_num} ({percent}%)")
 
             page = doc[page_index]
-            pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))
+            pix = page.get_pixmap(matrix=fitz.Matrix(3, 3))
             img = np.array(Image.frombytes("RGB", [pix.width, pix.height], pix.samples))
 
             result = reader.readtext(img, detail=0)
